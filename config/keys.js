@@ -1,4 +1,5 @@
-module.exports = {
-  googleClientID: '226817307097-u0er9uc8etummibj9frptj1deijren8q.apps.googleusercontent.com',
-  googleClientSecert: 'd64FciviazDer1nMtHDiQ5jY',
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./prod.js');
+} else {
+  module.exports = require('./dev.js');
 }
